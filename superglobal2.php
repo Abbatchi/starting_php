@@ -37,7 +37,7 @@ echo '<br /><br />modifier<br /><br />';
 		<form action="superglobal.php" method="get">
 			<p>
 				<p>Login <input type="text" placeholder="LOGIN" name="login" /></p>
-			    <p>Password <input type="text" placeholder="PASSWORD" name="pass" /></p>
+			    <p>Password <input type="password" placeholder="PASSWORD" name="pass" /></p>
 			    <input type="submit" value="Valider" />
 			</p>
 		</form>

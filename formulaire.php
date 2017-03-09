@@ -53,7 +53,7 @@
     <option value="mr">Mr</option>
     <option value="mme">Mme</option>
 	</select>
-    <input type="submit" value="Valider" />	
+    <button type="submit"> OK </button>	
  
 </p>
 </form>
@@ -70,7 +70,7 @@
     <option value="mr">Mr</option>
     <option value="mme">Mme</option>
 	</select>
-    <input type="submit" value="Valider" />	<br>
+      <button type="submit"> OK </button>	<br>
  	<input type="file" name="file" />
 
 

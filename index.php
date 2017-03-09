@@ -14,6 +14,9 @@
 	<a href="tableau.php">Tableau</a><br> 
 	<a href="parametres.php">Parametres</a><br> 
 	<a href="formulaire.php">Formulaires</a><br> 
-	
+	<a href="superglobal.php">Superglobals</a><br> 
+	<a href="date.php">Dates</a><br> 
+
+
 </body>
 </html>
