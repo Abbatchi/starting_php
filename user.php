@@ -43,7 +43,7 @@ echo "<h1 class='rainbow'>Exo4 <br> </h1>";
 
 echo "<h1 class='rainbow'>Exo5 <br> </h1>";
 
-	   if (isset($_GET["nom"])&&($_GET["prenom"])&&($_GET["choix"])) {
+	   if (isset($_GET["nom"])&&($_GET["prenom"])&&($_GET["choix"])&&($_GET["choix"])) {
 		echo 'Bonjour ' . $_GET["prenom"] ." ". $_GET["nom"]. " " . $_GET["choix"] . $_GET["file"] .'!';
 	}
 	else { 
@@ -53,16 +53,18 @@ echo "<h1 class='rainbow'>Exo5 <br> </h1>";
 
 echo "<h1 class='rainbow'>Exo6 <br> </h1>";
 
-	   if (isset($_GET["nom"])&&($_GET["prenom"])&&($_GET["choix"])) {
+	   if (isset($_GET["nom"])&&($_GET["prenom"])&&($_GET["choix"])&&($_GET["file"])) {
 		
-			$ext = array_pop($_GET["file"]);
-		if ($ext = "pdf") {
-			echo 'Bonjour ' . $_GET["prenom"] ." ". $_GET["nom"]. " " . $_GET["choix"] . $_GET["file"] .'!';
-		}
-		else
-		{
-			echo "blabla";
-		}
+		$info = new SplFileInfo($_GET["file"]);
+
+            if( $info->getExtension() == "pdf"){
+            	echo 'Bonjour ' . $_GET["prenom"] ." ". $_GET["nom"]. " " . $_GET["choix"] . $_GET["file"] .'!';
+                $PDF = true;
+            }else{
+                $PDF = false;
+
+                echo '<script>alert("Pas PDF !");</script>';
+            }
 	}
 	else { 
 		header('Location: formulaire.php');
